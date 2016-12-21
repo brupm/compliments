@@ -1,5 +1,7 @@
 %p Take a look at the nice thing #{@compliment.complimenter} said about you!
 
+%hr
 %p= @compliment.text
+%hr
 
 %p= link_to "View your compliment", compliment_url(@compliment)

@@ -1,8 +1,8 @@
-= simple_form_for @compliment, as: :kudos, html: { class: 'form' } do |f|
+= simple_form_for @compliment, html: { class: 'form' } do |f|
 
   %fieldset.form-field
-    = f.association :complimentee, as: :receiver, input_html: { class: 'form-select' }, label_html: { class: 'form-label' }, include_blank: false
+    = f.association :complimentee, label: 'Compliment Receiver', input_html: { class: 'form-select' }, label_html: { class: 'form-label' }, include_blank: false
   %fieldset.form-field
-    = f.input :text, as: :text, input_html: { class: 'form-input', rows: '5' }, label_html: { class: 'form-label' }
+    = f.input :text, as: :text, label: 'Content', input_html: { class: 'form-input', rows: '5' }, label_html: { class: 'form-label' }
 
   = f.submit class: "btn"

@@ -13,6 +13,7 @@ module Slack
   end
 
   def self.notify_quote(quote)
+    return
     uri = URI.parse(SLACK_INCOMING_WEBHOOK)
     response =  Net::HTTP.post_form(uri, { payload: quote_json(quote) })
   end

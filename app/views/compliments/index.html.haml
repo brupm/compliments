@@ -8,7 +8,7 @@
 
   .split-cell
 
-    = link_to "New Kudos", new_compliment_path, class: "btn"
+    = link_to "New Compliment", new_compliment_path, class: "btn"
 
 - unless @compliments.empty?
   .g.collection.collection--1of2
@@ -16,4 +16,4 @@
       .g-b.g-b--1of2.collection-item
         = render compliment
 - else
-  %p.pal.tac.tcs.tsi There are no kudos currently. Say something nice :)
+  %p.pal.tac.tcs.tsi There are no compliments currently. Say something nice :)
