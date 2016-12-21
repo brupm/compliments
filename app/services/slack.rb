@@ -7,6 +7,7 @@ module Slack
   SLACK_INCOMING_WEBHOOK = ENV["SLACK_INCOMING_WEBHOOK"]
 
   def self.notify_compliment(compliment)
+    return
     uri = URI.parse(SLACK_INCOMING_WEBHOOK)
     response =  Net::HTTP.post_form(uri, { payload: compliment_json(compliment) })
   end

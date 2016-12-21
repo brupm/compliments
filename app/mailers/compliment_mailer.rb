@@ -1,5 +1,5 @@
 class ComplimentMailer < ActionMailer::Base
-  default from: "compliments@codeschool.com"
+  default from: '"Dox Kudos" <kudos@doximity.com>'
 
   def notify(compliment)
     @compliment = compliment
